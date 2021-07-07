@@ -141,6 +141,32 @@ class Profile extends React.Component {
 
                     </div>
                   </div>
+
+                  <div className="mt-5 py-5 border-top text-center">
+                    <div className="py-5 bg-secondary">
+                      <div>
+                        <i className="ni education_hat mr-2" />
+                        Now choose an _ job from this list and see if you can think of 3 skills or qualities you'll need for that job
+                      </div>
+                      <div>
+                        <i className="ni education_hat mr-2" />
+                        Write down as many as you can think of.
+                      </div>
+                      <Input/>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Submit Answer
+                        </Button>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </Card>
             </Container>
