@@ -16,7 +16,6 @@
 
 */
 import React from "react";
-import { useState } from 'react'
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
@@ -24,32 +23,29 @@ import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 import FortuneWheel from "views/IndexSections/FortuneWheel.js";
 
-// nodejs library that concatenates classes
-import classnames from "classnames";
-
 
 // reactstrap components
 import {
   Button,
   Card,
-  FormGroup,
   Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col
 } from "reactstrap";
 
+
 class Profile extends React.Component {
   
+ 
+
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
   render() {
+
     return (
       <>
         <DemoNavbar />
@@ -135,7 +131,18 @@ class Profile extends React.Component {
                           size="lg"
                           type="button"
                         >
-                          Submit Answer
+                          Add to List
+                        </Button>
+                      </div>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Submit List
                         </Button>
                       </div>
 
@@ -164,6 +171,9 @@ class Profile extends React.Component {
                           Submit Answer
                         </Button>
                       </div>
+                     
+                      
+                      
 
                     </div>
                   </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
 
+const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
 const data = [
   { option: 'A', style: { backgroundColor: '#A6192E', textColor: 'white' }   },
   { option: 'B', style: { backgroundColor: '#C6007E', textColor: 'white' } },
@@ -29,16 +31,20 @@ const data = [
   { option: 'Y' },
   { option: 'Z' },
 ]
+var letter
 
 export default () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
 
-  const handleSpinClick = () => {
+  const handleSpinClick = (props) => {
     const newPrizeNumber = Math.floor(Math.random() * data.length)
     setPrizeNumber(newPrizeNumber)
     setMustSpin(true)
+    letter = alphabet[newPrizeNumber]
   }
+  console.log(letter);
+
 
   return (
     <>
@@ -46,15 +52,16 @@ export default () => {
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={data}
-
         onStopSpinning={() => {
           setMustSpin(false)
+
         }}
 
         innerRadius={10}
 
       />
-      <button onClick={handleSpinClick}>SPIN</button>
+      <button onClick={handleSpinClick}>SPIN </button>
+        <h2 onClick={() => handleSpinClick(letter)}>{letter}</h2>
     </>
   )
 }
