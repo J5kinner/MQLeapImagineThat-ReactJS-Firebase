@@ -17,20 +17,35 @@
 */
 import React from "react";
 
-// reactstrap components
-import { Button, Card, Container, Row, Col } from "reactstrap";
-
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
+import FortuneWheel from "views/IndexSections/FortuneWheel.js";
+
+
+// reactstrap components
+import {
+  Button,
+  Card,
+  Input,
+  Container,
+  Row,
+  Col
+} from "reactstrap";
+
+
 class Profile extends React.Component {
+  
+ 
+
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
   render() {
+
     return (
       <>
         <DemoNavbar />
@@ -68,23 +83,16 @@ class Profile extends React.Component {
               <Card className="card-profile shadow mt--300">
                 <div className="px-4">
                   <Row className="justify-content-center">
-                    <Col className="order-lg-2" lg="3">
-                      
-                    </Col>
+                    <Col className="order-lg-2" lg="3"></Col>
                     <Col
                       className="order-lg-3 text-lg-right align-self-lg-center"
                       lg="4"
                     >
-                      <div className="card-profile-actions py-4 mt-lg-0">
-                       
-                      </div>
+                      <div className="card-profile-actions py-4 mt-lg-0"></div>
                     </Col>
-                    
                   </Row>
                   <div className="text-center mt-5">
-                    <h3>
-                      Career Wheel
-                    </h3>
+                    <h3>Career Wheel</h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
                       Bucharest, Romania
@@ -100,15 +108,74 @@ class Profile extends React.Component {
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
-                      <Col lg="9">
-                        <p>
-                          In this game you need to boogie
-                        </p>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          THE GAME WILL GO HERE
-                        </a>
-                      </Col>
+                      <FortuneWheel />
                     </Row>
+                  </div>
+
+                  <div className="mt-5 py-5 border-top text-center">
+                    <div className="py-5 bg-secondary">
+                      <div>
+                        <i className="ni education_hat mr-2" />
+                        Can you think of an careers that start with the letter_?
+                      </div>
+                      <div>
+                        <i className="ni education_hat mr-2" />
+                        Write down as many as you can think of.
+                      </div>
+                      <Input/>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Add to List
+                        </Button>
+                      </div>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Submit List
+                        </Button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="mt-5 py-5 border-top text-center">
+                    <div className="py-5 bg-secondary">
+                      <div>
+                        <i className="ni education_hat mr-2" />
+                        Now choose an _ job from this list and see if you can think of 3 skills or qualities you'll need for that job
+                      </div>
+                      <div>
+                        <i className="ni education_hat mr-2" />
+                        Write down as many as you can think of.
+                      </div>
+                      <Input/>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Submit Answer
+                        </Button>
+                      </div>
+                     
+                      
+                      
+
+                    </div>
                   </div>
                 </div>
               </Card>
