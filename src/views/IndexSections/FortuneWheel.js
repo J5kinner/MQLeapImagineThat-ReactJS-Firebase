@@ -31,9 +31,11 @@ const data = [
   { option: 'Y' },
   { option: 'Z' },
 ]
-var letter
 
-export default () => {
+var letter
+const FortuneWheel = () => {
+  
+
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
 
@@ -43,8 +45,6 @@ export default () => {
     setMustSpin(true)
     letter = alphabet[newPrizeNumber]
   }
-  console.log(letter);
-
 
   return (
     <>
@@ -64,4 +64,6 @@ export default () => {
         <h2 onClick={() => handleSpinClick(letter)}>{letter}</h2>
     </>
   )
-}
+};
+
+export default FortuneWheel;
