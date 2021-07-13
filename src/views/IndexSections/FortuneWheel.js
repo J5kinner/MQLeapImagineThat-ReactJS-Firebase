@@ -1,5 +1,14 @@
 import React, { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
+import {
+  Button,
+  Card,
+  Input,
+  Container,
+  Row,
+  Col
+} from "reactstrap";
+
 
 const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
@@ -61,7 +70,42 @@ const FortuneWheel = () => {
 
       />
       <button onClick={handleSpinClick}>SPIN </button>
-        <h2 onClick={() => handleSpinClick(letter)}>{letter}</h2>
+        <div className="mt-5 py-5 border-top text-center">
+                    <div className="py-5 bg-secondary">
+                      <div>
+                        <i className="ni education_hat mr-2" onClick={() => handleSpinClick(letter)}/>
+                        Can you think of an careers that start with the letter <b>{letter}</b>?
+                      </div>
+                      <div>
+                        <i className="ni education_hat mr-2" />
+                        Pleast write down as many as you can think of
+                      </div>
+                      <Input/>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Add to List
+                        </Button>
+                      </div>
+                      <div>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="default"
+                          size="lg"
+                          type="button"
+                        >
+                          Submit List
+                        </Button>
+                      </div>
+
+                    </div>
+                  </div>
     </>
   )
 };

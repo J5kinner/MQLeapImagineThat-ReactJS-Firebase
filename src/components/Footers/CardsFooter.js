@@ -114,20 +114,7 @@ class CardsFooter extends React.Component {
                 <UncontrolledTooltip delay={0} target="tooltip829810202">
                   Follow us
                 </UncontrolledTooltip>
-                <Button
-                  className="btn-icon-only rounded-circle ml-1"
-                  color="github"
-                  href="https://github.com/creativetimofficial"
-                  id="tooltip495507257"
-                  target="_blank"
-                >
-                  <span className="btn-inner--icon">
-                    <i className="fa fa-github" />
-                  </span>
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip495507257">
-                  Star on Github
-                </UncontrolledTooltip>
+               
               </Col>
             </Row>
             <hr />
@@ -136,12 +123,12 @@ class CardsFooter extends React.Component {
                 <div className="copyright">
                   © {new Date().getFullYear()}{" "}
                   <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
+                    href="https://www.jonahskinner.com"
                     target="_blank"
                   >
-                    Creative Tim
+                    Jonah Skinner
                   </a>
-                  .
+                  
                 </div>
               </Col>
               <Col md="6">
@@ -151,7 +138,7 @@ class CardsFooter extends React.Component {
                       href="https://www.creative-tim.com?ref=adsr-footer"
                       target="_blank"
                     >
-                      Creative Tim
+                      Widening Participation Unit
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -170,14 +157,7 @@ class CardsFooter extends React.Component {
                       Blog
                     </NavLink>
                   </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md"
-                      target="_blank"
-                    >
-                      MIT License
-                    </NavLink>
-                  </NavItem>
+                 
                 </Nav>
               </Col>
             </Row>
