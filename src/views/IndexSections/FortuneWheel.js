@@ -114,21 +114,7 @@ const FortuneWheel = () => {
           </div>
           <div>
           <FormInput/>
-          <Form>
-            <Row>
-              <Col md="6">
-                <FormGroup>
-                  <Input
-                    id="Input1"
-                    placeholder="Please enter your answers here"
-                    type="text"
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
-          
-     
-          </Form>
+         
           </div>
 
           

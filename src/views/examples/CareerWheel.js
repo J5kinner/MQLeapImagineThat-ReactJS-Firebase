@@ -11,29 +11,16 @@ import SimpleFooter from "components/Footers/SimpleFooter.js";
 import FortuneWheel from "views/IndexSections/FortuneWheel.js";
 import ReorderList from "../IndexSections/ReorderList.js";
 
-
 // reactstrap components
-import {
-  Button,
-  Card,
-  Input,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
-
+import { Button, Card, Input, Container, Row, Col } from "reactstrap";
 
 class Profile extends React.Component {
-  
- 
-
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
   render() {
-
     return (
       <>
         <DemoNavbar />
@@ -87,12 +74,12 @@ class Profile extends React.Component {
                     </div>
                     <div className="h6 mt-4">
                       <i className="ni business_briefcase-24 mr-2" />
-                      The Task is: this is a bunch of words meaning something that is to be done somehow
+                      The Task is: this is a bunch of words meaning something
+                      that is to be done somehow
                     </div>
                     <div>
                       <i className="ni education_hat mr-2" />
-                      Steps on how to play: 
-                  
+                      Steps on how to play:
                     </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
@@ -100,16 +87,12 @@ class Profile extends React.Component {
                       <FortuneWheel />
                     </Row>
                   </div>
-                  <Card>
-                 
-                  <div>
-          <ReorderList />
-          </div>
-              
-                  </Card>
-                
                 </div>
+                <div>
+                <ReorderList />
+              </div>
               </Card>
+              
             </Container>
           </section>
         </main>
