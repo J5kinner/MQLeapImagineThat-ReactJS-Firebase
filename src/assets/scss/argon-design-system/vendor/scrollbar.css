@@ -5,13 +5,11 @@
   opacity: 0;
 }
 .scrollbar-inner .scroll-element {
-  -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
   margin-right: 2px;
 }
 .scrollbar-inner .scroll-element .scroll-bar,
 .scrollbar-inner .scroll-element .scroll-element_track {
-  -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 .scrollbar-inner .scroll-element .scroll-element_track {

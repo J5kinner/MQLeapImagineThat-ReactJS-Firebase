@@ -9,6 +9,7 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 import FortuneWheel from "views/IndexSections/FortuneWheel.js";
+import ReorderList from "../IndexSections/ReorderList.js";
 
 
 // reactstrap components
@@ -99,44 +100,13 @@ class Profile extends React.Component {
                       <FortuneWheel />
                     </Row>
                   </div>
-
-                  <div className="mt-5 py-5 border-top text-center">
-                    <div className="py-5 bg-secondary">
-                      <div>
-                        <i className="ni education_hat mr-2" />
-                        Can you think of an careers that start with the letter_?
-                      </div>
-                      <div>
-                        <i className="ni education_hat mr-2" />
-                        Write down as many as you can think of.
-                      </div>
-                      <Input/>
-                      <div>
-                        <Button
-                          block
-                          className="btn-round"
-                          color="default"
-                          size="lg"
-                          type="button"
-                        >
-                          Add to List
-                        </Button>
-                      </div>
-                      <div>
-                        <Button
-                          block
-                          className="btn-round"
-                          color="default"
-                          size="lg"
-                          type="button"
-                        >
-                          Submit List
-                        </Button>
-                      </div>
-
-                    </div>
-                  </div>
-
+                  <Card>
+                 
+                  <div>
+          <ReorderList />
+          </div>
+              
+                  </Card>
                 
                 </div>
               </Card>
