@@ -12,12 +12,12 @@ const FormInput = () => {
     console.log(data);
   };
 
-  const addFriend = () => {
+  const addCareer = () => {
     setIndexes(prevIndexes => [...prevIndexes, counter]);
     setCounter(prevCounter => prevCounter + 1);
   };
 
-  const removeFriend = index => () => {
+  const removeCareer = index => () => {
     setIndexes(prevIndexes => [...prevIndexes.filter(item => item !== index)]);
     setCounter(prevCounter => prevCounter - 1);
   };
@@ -29,24 +29,23 @@ const FormInput = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       {indexes.map(index => {
-        const fieldName = `friends[${index}]`;
+        const fieldName = `rows[${index}]`;
         return (
           <fieldset name={fieldName} key={fieldName}>
             <label>
-              Career {index}:
               <input
                 type="text"
                 {...register(`${fieldName}.firstName`)}
               />
             </label>
-            <button type="button" onClick={removeFriend(index)}>
+            <button type="button" onClick={removeCareer(index)}>
               Remove
             </button>
           </fieldset>
         );
       })}
 
-      <button type="button" onClick={addFriend}>
+      <button type="button" onClick={addCareer}>
         Add Career
       </button>
       <button type="button" onClick={clearFriends}>

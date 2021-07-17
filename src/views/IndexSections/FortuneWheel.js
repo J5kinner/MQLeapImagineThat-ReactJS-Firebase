@@ -113,11 +113,8 @@ const FortuneWheel = () => {
             Pleast write down as many as you can think of
           </div>
           <div>
-          <FormInput/>
-         
+            <FormInput />
           </div>
-
-          
 
           <div>
             <Button
@@ -131,10 +128,7 @@ const FortuneWheel = () => {
             </Button>
           </div>
         </div>
-
       </div>
-
-      
     </>
   );
 };
