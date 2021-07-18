@@ -18,19 +18,10 @@ const initialData = {
       title: "Skills",
       taskIds: [],
     },
-    "column-2": {
-      id: "column-2",
-      title: "Lawyer",
-      taskIds: [],
-    },
-    "column-3": {
-      id: "column-3",
-      title: "Engineer",
-      taskIds: [],
-    },
+ 
   },
   // Facilitate reordering of the columns
-  columnOrder: ["column-1", "column-2", "column-3"],
+  columnOrder: ["column-1"],
 };
 
 const Container = styled.div`
@@ -163,45 +154,48 @@ class ReorderList extends React.Component {
     });
   };
 
-//   inputChangeHandler2 = ({ target: { value } }) =>
-//     this.setState({
-//       newCol: value,
-//     });
+  inputChangeHandler2 = ({ target: { value } }) =>
+    this.setState({
+      newCol: value,
+    });
 
-//   submitHandler2 = (e) => {
-//     e.preventDefault();
-//     this.setState((prevState) => {
-//       // increment col count
-//       const newCount = prevState.colCount + 1;
-//       // create new id based on row count
-//       const newId = `column-${newCount}`;
+  submitHandler2 = (e) => {
+    e.preventDefault();
+
+    this.setState((prevState) => {
+      // increment col count
+      const newCount = prevState.colCount + 1;
+      // create new id based on row count
+      const newId = `column-${newCount}`;
 
 
-//       return {
-//         colCount: newCount,
-//         // clear input
-//         newCol: "",
-//         // add column id at the end of first column
-//         columns: {
-//           // add to columns array
-//           ...prevState.columns,
-//           [newId]: { id: newId, title: prevState.newCol, taskIds: [] },
-//         },
-//         // add column id at the end of first column
-//         columnOrder: {
-//             ...prevState.columns["column-1"], ...prevState.columns[newId],
-            
-            
-//         },
-//         // columns: [...prevState.columns, newId,],
-//       };
-//     });
-//   };
+      return {
+
+        colCount: newCount,
+        // clear input
+        newCol: "",
+        // add column id at the end of first column
+        columns: {
+          // add to columns array
+          ...prevState.columns,
+          [newId]: { id: newId, title: prevState.newCol, taskIds: [] },
+        },
+
+        // add column to columnOrder
+        columnOrder:[...prevState.columnOrder, newId],
+        // columnOrder: {
+        //   ...prevState.columns,},
+        // columns: [...prevState.columns, newId,],
+      };
+
+    });
+  };
 
   render() {
     return (
+
       <DragDropContext onDragEnd={this.onDragEnd}>
-        {/* <div>
+        <div>
           <form onSubmit={this.submitHandler2}>
             <input
               type="text"
@@ -211,9 +205,10 @@ class ReorderList extends React.Component {
               onChange={this.inputChangeHandler2}
             />
             <input type="submit" value="Submit" />
+
           </form>
           Please enter a career
-        </div> */}
+        </div>
 
         <div>
           <form onSubmit={this.submitHandler}>
