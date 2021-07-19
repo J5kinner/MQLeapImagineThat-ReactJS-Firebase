@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MQLeapImagineThat/static/css/main.054a269c.chunk.css",
-    "main.js": "/MQLeapImagineThat/static/js/main.1b2916fe.chunk.js",
-    "main.js.map": "/MQLeapImagineThat/static/js/main.1b2916fe.chunk.js.map",
+    "main.css": "/MQLeapImagineThat/static/css/main.e4011c80.chunk.css",
+    "main.js": "/MQLeapImagineThat/static/js/main.424f0d12.chunk.js",
+    "main.js.map": "/MQLeapImagineThat/static/js/main.424f0d12.chunk.js.map",
     "runtime-main.js": "/MQLeapImagineThat/static/js/runtime-main.42f9361a.js",
     "runtime-main.js.map": "/MQLeapImagineThat/static/js/runtime-main.42f9361a.js.map",
-    "static/js/2.e8aee66e.chunk.js": "/MQLeapImagineThat/static/js/2.e8aee66e.chunk.js",
-    "static/js/2.e8aee66e.chunk.js.map": "/MQLeapImagineThat/static/js/2.e8aee66e.chunk.js.map",
+    "static/js/2.46f9bd31.chunk.js": "/MQLeapImagineThat/static/js/2.46f9bd31.chunk.js",
+    "static/js/2.46f9bd31.chunk.js.map": "/MQLeapImagineThat/static/js/2.46f9bd31.chunk.js.map",
     "index.html": "/MQLeapImagineThat/index.html",
-    "static/css/main.054a269c.chunk.css.map": "/MQLeapImagineThat/static/css/main.054a269c.chunk.css.map",
-    "static/js/2.e8aee66e.chunk.js.LICENSE.txt": "/MQLeapImagineThat/static/js/2.e8aee66e.chunk.js.LICENSE.txt",
-    "static/js/main.1b2916fe.chunk.js.LICENSE.txt": "/MQLeapImagineThat/static/js/main.1b2916fe.chunk.js.LICENSE.txt",
+    "static/css/main.e4011c80.chunk.css.map": "/MQLeapImagineThat/static/css/main.e4011c80.chunk.css.map",
+    "static/js/2.46f9bd31.chunk.js.LICENSE.txt": "/MQLeapImagineThat/static/js/2.46f9bd31.chunk.js.LICENSE.txt",
+    "static/js/main.424f0d12.chunk.js.LICENSE.txt": "/MQLeapImagineThat/static/js/main.424f0d12.chunk.js.LICENSE.txt",
     "static/media/argon-react-white.png": "/MQLeapImagineThat/static/media/argon-react-white.e4dd3b41.png",
     "static/media/argon-react.png": "/MQLeapImagineThat/static/media/argon-react.128d71d3.png",
     "static/media/creativetim-white-slim.png": "/MQLeapImagineThat/static/media/creativetim-white-slim.c9b2f68e.png",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.42f9361a.js",
-    "static/js/2.e8aee66e.chunk.js",
-    "static/css/main.054a269c.chunk.css",
-    "static/js/main.1b2916fe.chunk.js"
+    "static/js/2.46f9bd31.chunk.js",
+    "static/css/main.e4011c80.chunk.css",
+    "static/js/main.424f0d12.chunk.js"
   ]
 }
