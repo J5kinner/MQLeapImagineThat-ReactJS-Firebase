@@ -9,6 +9,9 @@ import { Button, Card, Container, Row, Col } from "reactstrap";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
+import WordSearch from "views/IndexSections/WordSearch.js";
+
+import styles from "../IndexSections/styles2.css";
 
 class Profile extends React.Component {
   componentDidMount() {
@@ -53,16 +56,12 @@ class Profile extends React.Component {
             <Container>
               <Card className="card-profile shadow mt--300">
                 <div className="px-4">
-                
                   <div className="text-center mt-5">
-                    <h3>
-                      Find a Word
-                    </h3>
+                    <h3>Find a Word</h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
                       Bucharest, Romania
                     </div>
-                    
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
@@ -74,42 +73,44 @@ class Profile extends React.Component {
                           giving it a warm, intimate feel with a solid groove
                           structure. An artist of considerable range.
                         </p>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                        THE GAME WILL GO HERE
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                          THE GAME WILL GO HERE
                         </a>
+                        <div className={styles}>
+                          <WordSearch />
+                        </div>
                       </Col>
                     </Row>
                   </div>
                 </div>
                 <Row className="justify-content-center">
-                    <Col className="order-lg-2" lg="3">
-                    </Col>
-                    <Col
-                      className="order-lg-3 text-lg-right align-self-lg-center"
-                      lg="4"
-                    >
-                      <div className="card-profile-actions py-4 mt-lg-0">
-                        <Button
-                          className="mr-4"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Next Level
-                        </Button>
-                        <Button
-                          className="float-right"
-                          color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Save
-                        </Button>
-                      </div>
-                    </Col>
-                  </Row>
+                  <Col className="order-lg-2" lg="3"></Col>
+                  <Col
+                    className="order-lg-3 text-lg-right align-self-lg-center"
+                    lg="4"
+                  >
+                    <div className="card-profile-actions py-4 mt-lg-0">
+                      <Button
+                        className="mr-4"
+                        color="info"
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                        size="sm"
+                      >
+                        Next Level
+                      </Button>
+                      <Button
+                        className="float-right"
+                        color="default"
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                        size="sm"
+                      >
+                        Save
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
               </Card>
             </Container>
           </section>

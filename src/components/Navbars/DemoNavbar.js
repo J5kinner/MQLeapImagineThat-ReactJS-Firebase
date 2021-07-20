@@ -22,7 +22,7 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 class DemoNavbar extends React.Component {
@@ -33,18 +33,18 @@ class DemoNavbar extends React.Component {
   }
   state = {
     collapseClasses: "",
-    collapseOpen: false
+    collapseOpen: false,
   };
 
   onExiting = () => {
     this.setState({
-      collapseClasses: "collapsing-out"
+      collapseClasses: "collapsing-out",
     });
   };
 
   onExited = () => {
     this.setState({
-      collapseClasses: ""
+      collapseClasses: "",
     });
   };
 
@@ -112,8 +112,8 @@ class DemoNavbar extends React.Component {
                               Career Wheel
                             </h6>
                             <p className="description d-none d-md-inline-block mb-0">
-                              Find out how many careers you can make
-                              which letter will you get?
+                              Find out how many careers you can make which
+                              letter will you get?
                             </p>
                           </Media>
                         </Media>
@@ -129,8 +129,8 @@ class DemoNavbar extends React.Component {
                               Future Me Tree
                             </h6>
                             <p className="description d-none d-md-inline-block mb-0">
-                              Create your future goals and craft a
-                              career path for yourself.
+                              Create your future goals and craft a career path
+                              for yourself.
                             </p>
                           </Media>
                         </Media>
@@ -146,8 +146,8 @@ class DemoNavbar extends React.Component {
                               Find-a-Word
                             </h5>
                             <p className="description d-none d-md-inline-block mb-0">
-                              See if you can solve all of our 
-                              find a word puzzles.
+                              See if you can solve all of our find a word
+                              puzzles.
                             </p>
                           </Media>
                         </Media>
@@ -157,15 +157,9 @@ class DemoNavbar extends React.Component {
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Examples</span>
+                      <span className="nav-link-inner--text">Games</span>
                     </DropdownToggle>
                     <DropdownMenu>
-                      {/* <DropdownItem to="/landing-page" tag={Link}>
-                        Landing
-                      </DropdownItem>
-                      <DropdownItem to="/profile-page" tag={Link}>
-                        Profile
-                      </DropdownItem> */}
                       <DropdownItem to="/career-wheel-page" tag={Link}>
                         Career Wheel
                       </DropdownItem>
@@ -175,8 +169,6 @@ class DemoNavbar extends React.Component {
                       <DropdownItem to="/Findaword-page" tag={Link}>
                         Find-a-Word
                       </DropdownItem>
-                   
-                  
                     </DropdownMenu>
                   </UncontrolledDropdown>
                 </Nav>

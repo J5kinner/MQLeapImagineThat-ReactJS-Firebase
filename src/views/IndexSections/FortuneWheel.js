@@ -2,16 +2,6 @@ import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import {
   Button,
-  Card,
-  Input,
-  Container,
-  Row,
-  Col,
-  FormGroup,
-  Form,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
 } from "reactstrap";
 
 import FormInput from "../IndexSections/FormInput.js";
@@ -111,21 +101,6 @@ const FortuneWheel = () => {
           <div>
             <i className="ni education_hat mr-2" />
             Pleast write down as many as you can think of
-          </div>
-          <div>
-            <FormInput />
-          </div>
-
-          <div>
-            <Button
-              block
-              className="btn-round"
-              color="default"
-              size="lg"
-              type="button"
-            >
-              Add to List
-            </Button>
           </div>
         </div>
       </div>

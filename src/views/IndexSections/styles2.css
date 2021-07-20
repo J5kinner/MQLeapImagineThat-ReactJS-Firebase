@@ -1,0 +1,105 @@
+/* 
+ * Custom translucent site header
+ */
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border-right: 1px #666 solid;
+  border-bottom: 1px #666 solid;
+  background-color: #efefef;
+  text-align: center;
+  margin-left: 0px;
+  margin-top: 0px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.1s;
+  user-select: none;
+  color: #555;
+}
+
+.cell:last-of-type {
+  border-right-width: 0px;
+}
+.searchRow:last-of-type > .cell {
+  border-bottom-width: 0px;
+}
+
+.cell:hover {
+  background-color: #11a7e1;
+  color: #fcfcfc;
+  cursor: pointer;
+}
+
+.cell.hilighted {
+  background-color: #11a7e1;
+  color: #fcfcfc;
+}
+
+.searchRow {
+  display: flex;
+  width: auto;
+}
+
+.searchGrid {
+  border: 4px #ccc solid;
+  width: auto;
+  margin: auto;
+  border: 1px #bbb solid;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+
+#root-wordSearch {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#word-list {
+  border: 1px #ececec solid;
+  letter-spacing: 1px;
+  background-color: #ddd;
+  padding: 5px;
+}
+
+#word-list li {
+  padding: 5px 10px;
+  margin: 2px;
+  border-left: 1px #333 solid;
+  transition: all 0.3s;
+  font-weight: lighter;
+  background-color: #f0f0f0;
+}
+
+#word-list li:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.ws-my-page-success-toast {
+  width: auto;
+  background-color: #7c6;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+.wrd {
+  background-color: #000;
+}
