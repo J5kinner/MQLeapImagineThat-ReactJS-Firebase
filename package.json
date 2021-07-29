@@ -1,7 +1,7 @@
 {
-  "name": "argon-design-system-react",
+  "name": "MQ Leap Imagine That",
   "version": "1.1.0",
-  "description": "React version of Argon Design System by Creative Tim",
+  "description": "React created by Jonah",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -22,15 +22,12 @@
     "argon-design-system-react",
     "design-system-react"
   ],
-  "author": "Creative Tim",
-  "license": "MIT",
+
   "bugs": {
     "url": "https://github.com/J5kinner/MQLeapImagineThat/issues"
   },
-  "homepage": "https://J5kinner.github.com/MQLeapImagineThat",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test",
@@ -49,7 +46,6 @@
   "dependencies": {
     "bootstrap": "4.3.1",
     "classnames": "2.2.6",
-    "gh-pages": "^3.2.3",
     "headroom.js": "0.11.0",
     "moment": "2.24.0",
     "node-sass": "4.13.1",
