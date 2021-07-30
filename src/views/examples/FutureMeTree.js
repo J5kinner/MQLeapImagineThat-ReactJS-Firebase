@@ -88,6 +88,22 @@ class Profile extends React.Component {
                       </Col>
                     </Row>
                   </div>
+                  <div className="mt-5 py-5 border-top text-center">
+                    <Row className="justify-content-center">
+                      <Col lg="9">
+                        <p>
+                          An artist of considerable range, Ryan — the name taken
+                          by Melbourne-raised, Brooklyn-based Nick Murphy —
+                          writes, performs and records all of his own music,
+                          giving it a warm, intimate feel with a solid groove
+                          structure. An artist of considerable range.
+                        </p>
+                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        THE GAME WILL GO HERE
+                        </a>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
                 <Row className="justify-content-center">
                     <Col className="order-lg-2" lg="3">

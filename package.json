@@ -22,7 +22,6 @@
     "argon-design-system-react",
     "design-system-react"
   ],
-
   "bugs": {
     "url": "https://github.com/J5kinner/MQLeapImagineThat/issues"
   },
@@ -55,6 +54,7 @@
     "react-custom-roulette": "^1.1.8",
     "react-datetime": "2.16.3",
     "react-dom": "16.12.0",
+    "react-flow-renderer": "^9.6.6",
     "react-hook-form": "^7.11.0",
     "react-router": "5.1.2",
     "react-router-dom": "5.1.2",

@@ -96,7 +96,7 @@ class DemoNavbar extends React.Component {
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Components</span>
+                      <span className="nav-link-inner--text">Games</span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-xl">
                       <div className="dropdown-menu-inner">
@@ -154,23 +154,7 @@ class DemoNavbar extends React.Component {
                       </div>
                     </DropdownMenu>
                   </UncontrolledDropdown>
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Games</span>
-                    </DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem to="/career-wheel-page" tag={Link}>
-                        Career Wheel
-                      </DropdownItem>
-                      <DropdownItem to="/FutureMeTree-page" tag={Link}>
-                        Future Me Tree
-                      </DropdownItem>
-                      <DropdownItem to="/Findaword-page" tag={Link}>
-                        Find-a-Word
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                  
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>
