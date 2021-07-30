@@ -2,7 +2,7 @@
 
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import { Button, Card, Container, Row, Col } from "reactstrap";
@@ -10,7 +10,7 @@ import { Button, Card, Container, Row, Col } from "reactstrap";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
-
+import Tree from "../IndexSections/Tree.js"
 class Profile extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -91,16 +91,11 @@ class Profile extends React.Component {
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
                       <Col lg="9">
-                        <p>
-                          An artist of considerable range, Ryan — the name taken
-                          by Melbourne-raised, Brooklyn-based Nick Murphy —
-                          writes, performs and records all of his own music,
-                          giving it a warm, intimate feel with a solid groove
-                          structure. An artist of considerable range.
-                        </p>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                        THE GAME WILL GO HERE
-                        </a>
+                        <div style={{height: '100vh',}}><Tree/></div>
+                      
+
+                        
+                        
                       </Col>
                     </Row>
                   </div>

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
-import {
-  Button,
-} from "reactstrap";
-
-import FormInput from "../IndexSections/FormInput.js";
 
 const alphabet = [
   "A",
