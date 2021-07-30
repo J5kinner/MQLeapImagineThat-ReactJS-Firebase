@@ -117,24 +117,6 @@ class DemoNavbar extends React.Component {
                             </p>
                           </Media>
                         </Media>
-                      
-                        <Media
-                          className="d-flex align-items-center"
-                          href="/Findaword-page"
-                        >
-                          <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                            <i className="ni ni-ui-04" />
-                          </div>
-                          <Media body className="ml-3">
-                            <h5 className="heading text-primary mb-md-1">
-                              Find-a-Word
-                            </h5>
-                            <p className="description d-none d-md-inline-block mb-0">
-                              See if you can solve all of our find a word
-                              puzzles.
-                            </p>
-                          </Media>
-                        </Media>
                         <Media
                           className="d-flex align-items-center"
                           href="/FutureMeTree-page"
@@ -149,6 +131,23 @@ class DemoNavbar extends React.Component {
                             <p className="description d-none d-md-inline-block mb-0">
                               Create your future goals and craft a career path
                               for yourself.
+                            </p>
+                          </Media>
+                        </Media>
+                        <Media
+                          className="d-flex align-items-center"
+                          href="/Findaword-page"
+                        >
+                          <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                            <i className="ni ni-ui-04" />
+                          </div>
+                          <Media body className="ml-3">
+                            <h5 className="heading text-primary mb-md-1">
+                              Find-a-Word
+                            </h5>
+                            <p className="description d-none d-md-inline-block mb-0">
+                              See if you can solve all of our find a word
+                              puzzles.
                             </p>
                           </Media>
                         </Media>

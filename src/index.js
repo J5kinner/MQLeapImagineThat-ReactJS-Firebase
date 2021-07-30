@@ -24,14 +24,14 @@ ReactDOM.render(
         render={props => <CareerWheel {...props} />}
       />
        <Route
-        path="/Findaword-page"
-        exact
-        render={props => <FindAWord {...props} />}
-      />
-       <Route
         path="/FutureMeTree-page"
         exact
         render={props => <FutureMeTree {...props} />}
+      />
+       <Route
+        path="/Findaword-page"
+        exact
+        render={props => <FindAWord {...props} />}
       />
       <Redirect to="/career-wheel-page" />
     </Switch>
