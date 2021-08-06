@@ -94,7 +94,7 @@ export default function App() {
             <Controls />
           </ReactFlow>
         </div>
-        <div style={{ textAlign: "left" , padding: 10 }}>
+        <div className="dndnode">
           {objectEdit.type === "default" && (
             <input
               value={objectEdit.data.value}

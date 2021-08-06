@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Wheel } from "react-custom-roulette";
+import { render } from "react-dom";
+import { Button } from "reactstrap";
 
 const alphabet = [
   "A",
@@ -35,28 +37,28 @@ const data = [
   { option: "B", style: { backgroundColor: "#C6007E", textColor: "white" } },
   { option: "C", style: { backgroundColor: "#D6D2C4", textColor: "black" } },
   { option: "D", style: { backgroundColor: "#80225F", textColor: "white" } },
-  { option: "E" },
-  { option: "F" },
-  { option: "G" },
-  { option: "H" },
-  { option: "I" },
-  { option: "J" },
-  { option: "K" },
-  { option: "L" },
-  { option: "M" },
-  { option: "N" },
-  { option: "O" },
-  { option: "P" },
-  { option: "Q" },
-  { option: "R" },
-  { option: "S" },
-  { option: "T" },
-  { option: "U" },
-  { option: "V" },
-  { option: "W" },
-  { option: "X" },
-  { option: "Y" },
-  { option: "Z" },
+  { option: "E", style: { backgroundColor: "#A6192E", textColor: "white" } },
+  { option: "F", style: { backgroundColor: "#C6007E", textColor: "white" } },
+  { option: "G", style: { backgroundColor: "#D6D2C4", textColor: "black" } },
+  { option: "H", style: { backgroundColor: "#80225F", textColor: "white" } },
+  { option: "I", style: { backgroundColor: "#A6192E", textColor: "white" } },
+  { option: "J", style: { backgroundColor: "#C6007E", textColor: "white" } },
+  { option: "K", style: { backgroundColor: "#D6D2C4", textColor: "black" } },
+  { option: "L", style: { backgroundColor: "#80225F", textColor: "white" } },
+  { option: "M", style: { backgroundColor: "#A6192E", textColor: "white" } },
+  { option: "N", style: { backgroundColor: "#C6007E", textColor: "white" } },
+  { option: "O", style: { backgroundColor: "#D6D2C4", textColor: "black" } },
+  { option: "P", style: { backgroundColor: "#80225F", textColor: "white" } },
+  { option: "Q", style: { backgroundColor: "#A6192E", textColor: "white" } },
+  { option: "R", style: { backgroundColor: "#C6007E", textColor: "white" } },
+  { option: "S", style: { backgroundColor: "#D6D2C4", textColor: "black" } },
+  { option: "T", style: { backgroundColor: "#80225F", textColor: "white" } },
+  { option: "U", style: { backgroundColor: "#A6192E", textColor: "white" } },
+  { option: "V", style: { backgroundColor: "#C6007E", textColor: "white" } },
+  { option: "W", style: { backgroundColor: "#D6D2C4", textColor: "black" } },
+  { option: "X", style: { backgroundColor: "#80225F", textColor: "white" } },
+  { option: "Y", style: { backgroundColor: "#A6192E", textColor: "white" } },
+  { option: "Z", style: { backgroundColor: "#C6007E", textColor: "white" } },
 ];
 
 var letter;
@@ -68,37 +70,44 @@ const FortuneWheel = () => {
     const newPrizeNumber = Math.floor(Math.random() * data.length);
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
+
     letter = alphabet[newPrizeNumber];
   };
 
   return (
     <>
-      <Wheel
-        mustStartSpinning={mustSpin}
-        prizeNumber={prizeNumber}
-        data={data}
-        onStopSpinning={() => {
-          setMustSpin(false);
-        }}
-        innerRadius={10}
-      />
-      <button onClick={handleSpinClick}>SPIN </button>
-      <div className="mt-5 py-5 border-top text-center">
-        <div className="py-5 bg-secondary">
-          <div>
-            <i
-              className="ni education_hat mr-2"
-              onClick={() => handleSpinClick(letter)}
-            />
-            Can you think of an careers that start with the letter{" "}
-            <b>{letter}</b>?
-          </div>
-          <div>
-            <i className="ni education_hat mr-2" />
-            Pleast write down as many as you can think of
-          </div>
+
+        <Wheel
+          mustStartSpinning={mustSpin}
+          prizeNumber={prizeNumber}
+          data={data}
+          onStopSpinning={() => {
+            setMustSpin(false);
+          }}
+          innerRadius={9}
+        />
+
+        <Button
+          block
+          color="primary"
+          size="lg"
+          type="button"
+          onClick={handleSpinClick}
+        >
+          SPIN{" "}
+        </Button>
+        <div>
+          <i
+            className="ni education_hat mr-2"
+            onClick={() => handleSpinClick(letter)}
+          />
+          How many careers can you think of which start with the letter <b>{letter}</b>
+          ?
         </div>
-      </div>
+        <div>
+          <i className="ni education_hat mr-2" />
+          Pleast write down as many as you can think of.
+        </div>
     </>
   );
 };

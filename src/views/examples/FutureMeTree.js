@@ -2,7 +2,7 @@
 
 
 */
-import React from 'react';
+import React from "react";
 
 // reactstrap components
 import { Button, Card, Container, Row, Col } from "reactstrap";
@@ -10,7 +10,7 @@ import { Button, Card, Container, Row, Col } from "reactstrap";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
-import Tree from "../IndexSections/Tree.js"
+import Tree from "../IndexSections/Tree.js";
 class Profile extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -54,82 +54,57 @@ class Profile extends React.Component {
             <Container>
               <Card className="card-profile shadow mt--300">
                 <div className="px-4">
-                  
                   <div className="text-center mt-5">
-                    <h3>
-                      Future Me Tree
-                    </h3>
+                    <h3>Future Me Tree</h3>
+                    <div className="h6 mt-4">Instructions</div>
                     <div className="h6 font-weight-300">
-                      <i className="ni location_pin mr-2" />
-                      Bucharest, Romania
+                      Drag each type of block onto the canvas 
                     </div>
-                    <div className="h6 mt-4">
-                      <i className="ni business_briefcase-24 mr-2" />
-                      Solution Manager - Creative Tim Officer
+                    <div className="h6 font-weight-300">
+                      Then you can click each block to create a new skill or career
                     </div>
-                    <div>
-                      <i className="ni education_hat mr-2" />
-                      University of Computer Science
+                    <div className="h6 font-weight-300">
+                      Then you can link each block to each other by dragging from the dots on each block
                     </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
-                      <Col lg="9">
-                        <p>
-                          An artist of considerable range, Ryan — the name taken
-                          by Melbourne-raised, Brooklyn-based Nick Murphy —
-                          writes, performs and records all of his own music,
-                          giving it a warm, intimate feel with a solid groove
-                          structure. An artist of considerable range.
-                        </p>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                        THE GAME WILL GO HERE
-                        </a>
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className="mt-5 py-5 border-top text-center">
-                    <Row className="justify-content-center">
-                      <Col lg="9">
-                        <div style={{height: '100vh',}}><Tree/></div>
-                      
-
-                        
-                        
+                      <Col lg="12">
+                        <div style={{ height: "100vh" }}>
+                          <Tree />
+                        </div>
                       </Col>
                     </Row>
                   </div>
                 </div>
                 <Row className="justify-content-center">
-                    <Col className="order-lg-2" lg="3">
-                
-                    </Col>
-                    <Col
-                      className="order-lg-3 text-lg-right align-self-lg-center"
-                      lg="4"
-                    >
-                      <div className="card-profile-actions py-4 mt-lg-0">
-                        <Button
-                          className="mr-4"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Save to PDF
-                        </Button>
-                        <Button
-                          className="float-right"
-                          color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Save to PNG
-                        </Button>
-                      </div>
-                    </Col>
-                  </Row>
+                  <Col className="order-lg-2" lg="3"></Col>
+                  <Col
+                    className="order-lg-3 text-lg-right align-self-lg-center"
+                    lg="4"
+                  >
+                    <div className="card-profile-actions py-4 mt-lg-0">
+                      <Button
+                        className="mr-4"
+                        color="info"
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                        size="sm"
+                      >
+                        Save to PDF
+                      </Button>
+                      <Button
+                        className="float-right"
+                        color="default"
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                        size="sm"
+                      >
+                        Save to PNG
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
               </Card>
             </Container>
           </section>

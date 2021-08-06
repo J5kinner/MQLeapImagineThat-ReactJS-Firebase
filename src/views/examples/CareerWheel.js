@@ -68,18 +68,14 @@ class Profile extends React.Component {
                   </Row>
                   <div className="text-center mt-5">
                     <h3>Career Wheel</h3>
+                    <div className="h6 mt-4">Instructions</div>
                     <div className="h6 font-weight-300">
-                      <i className="ni location_pin mr-2" />
-                      This is a game
+                      Spin the wheel and type out as many careers and skills as
+                      you
                     </div>
-                    <div className="h6 mt-4">
-                      <i className="ni business_briefcase-24 mr-2" />
-                      The Task is: this is a bunch of words meaning something
-                      that is to be done somehow
-                    </div>
-                    <div>
-                      <i className="ni education_hat mr-2" />
-                      Steps on how to play:
+                    <div className="h6 font-weight-300">
+                      can and match them all up by dragging and droppping your
+                      entries.
                     </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
@@ -89,10 +85,9 @@ class Profile extends React.Component {
                   </div>
                 </div>
                 <div>
-                <ReorderList />
-              </div>
+                  <ReorderList />
+                </div>
               </Card>
-              
             </Container>
           </section>
         </main>

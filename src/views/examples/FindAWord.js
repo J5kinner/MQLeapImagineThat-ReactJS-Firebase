@@ -58,28 +58,17 @@ class Profile extends React.Component {
                 <div className="px-4">
                   <div className="text-center mt-5">
                     <h3>Find a Word</h3>
+                    <div className="h6 mt-4">Instructions</div>
                     <div className="h6 font-weight-300">
-                      <i className="ni location_pin mr-2" />
-                      Bucharest, Romania
+                      Click on the first letter of the word you found and drag
+                      to the last letter to discover each word.
                     </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
-                      <Col lg="9">
-                        <p>
-                          An artist of considerable range, Ryan — the name taken
-                          by Melbourne-raised, Brooklyn-based Nick Murphy —
-                          writes, performs and records all of his own music,
-                          giving it a warm, intimate feel with a solid groove
-                          structure. An artist of considerable range.
-                        </p>
-                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                          THE GAME WILL GO HERE
-                        </a>
-                        <div className={styles}>
-                          <WordSearch />
-                        </div>
-                      </Col>
+                      <div className={styles}>
+                        <WordSearch />
+                      </div>
                     </Row>
                   </div>
                 </div>

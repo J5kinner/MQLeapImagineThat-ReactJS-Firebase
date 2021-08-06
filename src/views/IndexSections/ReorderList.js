@@ -1,7 +1,18 @@
 import React from "react";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
+// reactstrap components
+import {
+  FormGroup,
+  Form,
+  Input,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroup,
+  Row,
+  Col,
+  Button
+} from "reactstrap";import styled from "styled-components";
 
-import styled from "styled-components";
 import Column from "./JSX/column.jsx";
 
 const initialData = {
@@ -196,32 +207,38 @@ class ReorderList extends React.Component {
 
       <DragDropContext onDragEnd={this.onDragEnd}>
         <div>
-          <form onSubmit={this.submitHandler2}>
-            <input
+          
+          <Form onSubmit={this.submitHandler2}>
+            <Row>
+              <Col md="5">
+                <FormGroup>
+            <Input
               type="text"
-              id="content"
-              className="teste"
+              id="exampleFormControlInput1"
+              placeholder="Please Enter a Career"
               value={this.state.newCol}
               onChange={this.inputChangeHandler2}
             />
-            <input type="submit" value="Submit" />
-
-          </form>
-          Please enter a career
-        </div>
-
-        <div>
-          <form onSubmit={this.submitHandler}>
-            <input
+            <Button color="default" outline type="submit">Submit</Button>
+            </FormGroup>
+            </Col>
+            </Row>
+          </Form>
+          <Form onSubmit={this.submitHandler}>
+            <Row>
+              <Col md="5">
+            <Input
               type="text"
               id="content"
+              placeholder="Please Enter a Skill"
               className="teste"
               value={this.state.newTask}
               onChange={this.inputChangeHandler}
             />
-            <input type="submit" value="Submit" />
-          </form>
-          Please enter the skills required for this career
+            <Button color="default" outline type="submit">Submit</Button>
+            </Col>
+            </Row>
+          </Form>
         </div>
         <Droppable droppableId="all-columns" direction="vertical" type="column">
           {(provided) => (

@@ -3,8 +3,8 @@
  */
 
 .cell {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-right: 1px #666 solid;
   border-bottom: 1px #666 solid;
   background-color: #efefef;
@@ -77,7 +77,7 @@ li {
 }
 
 #word-list li {
-  padding: 5px 10px;
+  padding: 5px 5px;
   margin: 2px;
   border-left: 1px #333 solid;
   transition: all 0.3s;
