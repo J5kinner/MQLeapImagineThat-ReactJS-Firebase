@@ -207,7 +207,6 @@ class ReorderList extends React.Component {
 
       <DragDropContext onDragEnd={this.onDragEnd}>
         <div>
-          
           <Form onSubmit={this.submitHandler2}>
             <Row>
               <Col md="5">
