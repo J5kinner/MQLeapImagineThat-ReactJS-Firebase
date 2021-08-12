@@ -5,9 +5,10 @@
 .cell {
   width: 40px;
   height: 40px;
+  border-radius: 5px;
   border-right: 1px #666 solid;
   border-bottom: 1px #666 solid;
-  background-color: #efefef;
+  background-color: #FDFDF7;
   text-align: center;
   margin-left: 0px;
   margin-top: 0px;
@@ -28,13 +29,13 @@
 }
 
 .cell:hover {
-  background-color: #11a7e1;
+  background-color: #A6192E;
   color: #fcfcfc;
   cursor: pointer;
 }
 
 .cell.hilighted {
-  background-color: #11a7e1;
+  background-color: #A6192E;
   color: #fcfcfc;
 }
 
@@ -74,15 +75,19 @@ li {
   letter-spacing: 1px;
   background-color: #ddd;
   padding: 5px;
+  border-radius: 5px;
+
 }
 
 #word-list li {
-  padding: 5px 5px;
+  padding: 4px 5px;
   margin: 2px;
   border-left: 1px #333 solid;
   transition: all 0.3s;
   font-weight: lighter;
   background-color: #f0f0f0;
+  border-radius: 5px;
+
 }
 
 #word-list li:hover {
@@ -92,7 +97,7 @@ li {
 
 .ws-my-page-success-toast {
   width: auto;
-  background-color: #7c6;
+  background-color: #5e72e4;
   position: relative;
   margin: auto;
   text-align: center;

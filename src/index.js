@@ -10,30 +10,30 @@ import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
-import CareerWheel from  "views/examples/CareerWheel.js";
-import FindAWord from "views/examples/FindAWord.js";
-import FutureMeTree from "views/examples/FutureMeTree.js";
+import CareerWheelPage from  "views/examples/CareerWheelPage.js";
+import WordSearchPage from "views/examples/WordSearchPage.js";
+import FutureMeTreePage from "views/examples/FutureMeTreePage.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/career-wheel-page" exact render={props => <CareerWheel {...props} />} />
+      <Route path="/CareerWheelPage" exact render={props => <CareerWheelPage {...props} />} />
        <Route
-        path="/career-wheel-page"
+        path="/CareerWheelPage"
         exact
-        render={props => <CareerWheel {...props} />}
+        render={props => <CareerWheelPage {...props} />}
       />
        <Route
-        path="/FutureMeTree-page"
+        path="/FutureMeTreePage"
         exact
-        render={props => <FutureMeTree {...props} />}
+        render={props => <FutureMeTreePage {...props} />}
       />
        <Route
-        path="/Findaword-page"
+        path="/WordSearchPage"
         exact
-        render={props => <FindAWord {...props} />}
+        render={props => <WordSearchPage {...props} />}
       />
-      <Redirect to="/career-wheel-page" />
+      <Redirect to="/CareerWheelPage" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

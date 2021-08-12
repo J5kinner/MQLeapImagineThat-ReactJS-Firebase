@@ -11,7 +11,7 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 import WordSearch from "views/IndexSections/WordSearch.js";
 
-import styles from "../IndexSections/styles2.css";
+import wordSearchStyles from "../IndexSections/wordSearchStyles.css";
 
 class Profile extends React.Component {
   componentDidMount() {
@@ -64,13 +64,14 @@ class Profile extends React.Component {
                       to the last letter to discover each word.
                     </div>
                   </div>
-                  <div className="mt-5 py-5 border-top text-center">
-                    <Row className="justify-content-center">
-                      <div className={styles}>
+                      <div className={wordSearchStyles}>
+                      <Row className="justify-content-center">
+                        <Col className="md-5">
                         <WordSearch />
+                        </Col>
+                        </Row>
+
                       </div>
-                    </Row>
-                  </div>
                 </div>
                 <Row className="justify-content-center">
                   <Col className="order-lg-2" lg="3"></Col>

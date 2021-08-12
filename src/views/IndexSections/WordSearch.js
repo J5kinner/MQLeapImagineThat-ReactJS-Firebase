@@ -1,5 +1,30 @@
+
+
+// Copyright (c) YEAR - https://codepen.io/imdigvijay/pen/gqzJKX
+
+// Permission is hereby granted, free of charge, to any person 
+// obtaining a copy of this software and associated documentation 
+// files (the "Software"), to deal in the Software without restriction,
+//  including without limitation the rights to use, copy, modify, 
+// merge, publish, distribute, sublicense, and/or sell copies of 
+// the Software, and to permit persons to whom the Software is 
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall 
+// be included in all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+// OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+// DEALINGS IN THE SOFTWARE.
+
+
 import React from "react";
-import styles from "../IndexSections/styles2.css";
+import WordSearchData from "./WordSearchData/WordSearchData";
 
 var completeList = [
   "Psychologist",
@@ -18,11 +43,12 @@ var completeList = [
   "Farmer",
   "Doctor",
 ];
+
 function getRandomWords() {
   let lst = [];
   for (var i = 0; i < 15; i++) {
     let currItem =
-      completeList[Math.floor(Math.random() * completeList.length)];
+    completeList[Math.floor(Math.random() * completeList.length)];
     if (lst.indexOf(currItem) === -1) {
       lst.push(currItem);
     } else {
@@ -620,15 +646,15 @@ class Grid extends React.Component {
     }
   }
 
-  // mouseOver(evt) {
-  //   if(this.ws.startBox !== null) {
-  //     let tempEndBox;
-  //     let id = evt.target.id;
-  //     tempEndBox = this.ws.getBoxById(id);
-  //     let dir = this.ws.getDirection(this.ws.startBox,  tempEndBox);
-  //     //highLightBoxes(this.ws.startBox, tempEndBox, dir);
-  //   }
-  // }
+  mouseOver(evt) {
+    if(this.ws.startBox !== null) {
+      let tempEndBox;
+      let id = evt.target.id;
+      tempEndBox = this.ws.getBoxById(id);
+      let dir = this.ws.getDirection(this.ws.startBox,  tempEndBox);
+      //highLightBoxes(this.ws.startBox, tempEndBox, dir);
+    }
+  }
 
   hasSelectionStarted() {
     return this.ws.startBox;

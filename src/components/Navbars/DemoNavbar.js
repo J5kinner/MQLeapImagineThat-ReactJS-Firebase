@@ -102,7 +102,7 @@ class DemoNavbar extends React.Component {
                       <div className="dropdown-menu-inner">
                         <Media
                           className="d-flex align-items-center"
-                          href="/career-wheel-page"
+                          href="/CareerWheelPage"
                         >
                           <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
                             <i className="ni ni-spaceship" />
@@ -119,7 +119,7 @@ class DemoNavbar extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="/FutureMeTree-page"
+                          href="/FutureMeTreePage"
                         >
                           <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
                             <i className="ni ni-palette" />
@@ -136,7 +136,7 @@ class DemoNavbar extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="/Findaword-page"
+                          href="/WordSearchPage"
                         >
                           <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
                             <i className="ni ni-ui-04" />
