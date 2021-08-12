@@ -60,8 +60,8 @@ class DemoNavbar extends React.Component {
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                 <img
-                  alt="..."
-                  src={require("assets/img/brand/argon-react-white.png")}
+                  alt="Leap Imagine That Logo"
+                  src={require("assets/img/brand/logo1.png").default}
                 />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">

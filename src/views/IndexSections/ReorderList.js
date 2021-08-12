@@ -10,15 +10,16 @@ import {
   InputGroup,
   Row,
   Col,
-  Button
-} from "reactstrap";import styled from "styled-components";
+  Button,
+} from "reactstrap";
+import styled from "styled-components";
 
 import Column from "./JSX/column.jsx";
 
 const initialData = {
   count: 1,
   colCount: 1,
-  newTask: "", 
+  newTask: "",
   newCol: "",
   tasks: {
     "task-1": { id: "task-1", content: "Take out the garbage" },
@@ -29,7 +30,6 @@ const initialData = {
       title: "Skills",
       taskIds: [],
     },
- 
   },
   // Facilitate reordering of the columns
   columnOrder: ["column-1"],
@@ -142,7 +142,6 @@ class ReorderList extends React.Component {
       // create new id based on task count
       const newId = `task-${newCount}`;
 
-
       return {
         count: newCount,
         // clear input
@@ -159,7 +158,6 @@ class ReorderList extends React.Component {
             ...prevState.columns["column-1"],
             taskIds: [...prevState.columns["column-1"].taskIds, newId],
           },
-
         },
       };
     });
@@ -179,9 +177,7 @@ class ReorderList extends React.Component {
       // create new id based on row count
       const newId = `column-${newCount}`;
 
-
       return {
-
         colCount: newCount,
         // clear input
         newCol: "",
@@ -193,72 +189,82 @@ class ReorderList extends React.Component {
         },
 
         // add column to columnOrder
-        columnOrder:[...prevState.columnOrder, newId],
-        // columnOrder: {
-        //   ...prevState.columns,},
-        // columns: [...prevState.columns, newId,],
+        columnOrder: [...prevState.columnOrder, newId],
       };
-
     });
   };
 
   render() {
     return (
+      <div>
+        <DragDropContext onDragEnd={this.onDragEnd}>
+          <Row className="justify-content-center">
+            <Col md="5">
+              <Form onSubmit={this.submitHandler2}>
+                <Input
+                  type="text"
+                  id="exampleFormControlInput1"
+                  placeholder="Please Enter a Career"
+                  value={this.state.newCol}
+                  onChange={this.inputChangeHandler2}
+                />
+                <Button className="justify-content-center col"  color="default" outline type="submit">
+                  Send
+                </Button>
+              </Form>
+            </Col>
+           
+          </Row>
+          <div className="h6 lead text-center font-weight-300">
+          Now choose a job from this list and see if you can think of 3 skills or qualities you’ll need for that job           </div>
+         
+          <Row className="justify-content-center">
 
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        <div>
-          <Form onSubmit={this.submitHandler2}>
-            <Row>
-              <Col md="5">
-                <FormGroup>
-            <Input
-              type="text"
-              id="exampleFormControlInput1"
-              placeholder="Please Enter a Career"
-              value={this.state.newCol}
-              onChange={this.inputChangeHandler2}
-            />
-            <Button color="default" outline type="submit">Submit</Button>
-            </FormGroup>
+          <Col md="5">
+              <Form onSubmit={this.submitHandler}>
+                <Input
+                  type="text"
+                  id="content"
+                  placeholder="Please Enter a Skill"
+                  className="teste"
+                  value={this.state.newTask}
+                  onChange={this.inputChangeHandler}
+                />
+                <Button className="justify-content-center col" color="default" outline type="submit">
+                  Send
+                </Button>
+              </Form>
             </Col>
             </Row>
-          </Form>
-          <Form onSubmit={this.submitHandler}>
-            <Row>
-              <Col md="5">
-            <Input
-              type="text"
-              id="content"
-              placeholder="Please Enter a Skill"
-              className="teste"
-              value={this.state.newTask}
-              onChange={this.inputChangeHandler}
-            />
-            <Button color="default" outline type="submit">Submit</Button>
-            </Col>
-            </Row>
-          </Form>
-        </div>
-        <Droppable droppableId="all-columns" direction="vertical" type="column">
-          {(provided) => (
-            <Container {...provided.droppableProps} ref={provided.innerRef}>
-              {this.state.columnOrder.map((columnId, index) => {
-                const column = this.state.columns[columnId];
+            <div className="h6 lead text-center font-weight-300">
+            Click and drag your skills into the careers you made
+          </div>
 
-                return (
-                  <InnerList
-                    key={column.id}
-                    column={column}
-                    taskMap={this.state.tasks}
-                    index={index}
-                  />
-                );
-              })}
-              {provided.placeholder}
-            </Container>
-          )}
-        </Droppable>
-      </DragDropContext>
+          <Droppable
+            droppableId="all-columns"
+            direction="vertical"
+            type="column"
+          >
+            {(provided) => (
+              <Container {...provided.droppableProps} ref={provided.innerRef}>
+                {this.state.columnOrder.map((columnId, index) => {
+                  const column = this.state.columns[columnId];
+
+                  return (
+                    <InnerList
+                      key={column.id}
+                      column={column}
+                      taskMap={this.state.tasks}
+                      index={index}
+                    />
+                  );
+                })}
+                {provided.placeholder}
+              </Container>
+            )}
+          </Droppable>
+        </DragDropContext>
+      </div>
     );
   }
 }

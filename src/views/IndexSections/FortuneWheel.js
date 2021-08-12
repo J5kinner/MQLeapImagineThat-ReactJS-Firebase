@@ -66,48 +66,55 @@ const FortuneWheel = () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
 
-  const handleSpinClick = (props) => {
+  async function handleSpinClick(props) {
     const newPrizeNumber = Math.floor(Math.random() * data.length);
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
+    await sleep(2000);
 
     letter = alphabet[newPrizeNumber];
-  };
+  }
+
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
 
   return (
     <>
+      <Wheel
+        mustStartSpinning={mustSpin}
+        prizeNumber={prizeNumber}
+        data={data}
+        onStopSpinning={() => {
+          setMustSpin(false);
+        }}
+        innerRadius={9}
+      />
 
-        <Wheel
-          mustStartSpinning={mustSpin}
-          prizeNumber={prizeNumber}
-          data={data}
-          onStopSpinning={() => {
-            setMustSpin(false);
-          }}
-          innerRadius={9}
+      <Button
+        block
+        color="primary"
+        size="lg"
+        type="button"
+        onClick={handleSpinClick}
+      >
+        SPIN{" "}
+      </Button>
+      <div>
+        <i
+          className="ni education_hat mr-2"
+          onClick={() => handleSpinClick(letter)}
         />
+      </div>
 
-        <Button
-          block
-          color="primary"
-          size="lg"
-          type="button"
-          onClick={handleSpinClick}
-        >
-          SPIN{" "}
-        </Button>
-        <div>
-          <i
-            className="ni education_hat mr-2"
-            onClick={() => handleSpinClick(letter)}
-          />
-          How many careers can you think of which start with the letter <b>{letter}</b>
-          ?
-        </div>
-        <div>
-          <i className="ni education_hat mr-2" />
-          Pleast write down as many as you can think of.
-        </div>
+      <div className="col-sm-9">
+        <h4 className="display-4 mb-0">
+          How many careers can you think of which start with the letter{" "}
+          <b>{letter}</b>?
+        </h4>
+        <i className="lead text-muted" />
+        <p>Pleast write down as many as you can think of &#128512;</p>
+      </div>
     </>
   );
 };
