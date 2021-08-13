@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 import styled from "styled-components";
 
-import Column from "./JSX/column.jsx";
+import Column from "../JSX/column.jsx";
 
 const initialData = {
   count: 1,

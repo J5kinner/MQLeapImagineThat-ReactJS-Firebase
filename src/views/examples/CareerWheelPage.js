@@ -8,8 +8,8 @@ import React from "react";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
-import FortuneWheel from "views/IndexSections/FortuneWheel.js";
-import ReorderList from "../IndexSections/ReorderList.js";
+import FortuneWheel from "views/IndexSections/CareerWheelComps/FortuneWheel.js";
+import ReorderList from "../IndexSections/CareerWheelComps/ReorderList.js";
 
 // reactstrap components
 import { Button, Card, Input, Container, Row, Col } from "reactstrap";

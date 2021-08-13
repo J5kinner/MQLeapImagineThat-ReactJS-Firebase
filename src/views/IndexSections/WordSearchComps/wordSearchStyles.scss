@@ -3,20 +3,20 @@
  */
 
 .cell {
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  border-right: 1px #666 solid;
-  border-bottom: 1px #666 solid;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.5em;
+  border-right: 0.1em #666 solid;
+  border-bottom: 0.1em #666 solid;
   background-color: #FDFDF7;
   text-align: center;
-  margin-left: 0px;
-  margin-top: 0px;
-  line-height: 30px;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  margin-left: 0.2em;
+  margin-top: 0.2em;
+  line-height: 2em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
   box-sizing: border-box;
-  transition: all 0.1s;
+  transition: all 0.2s;
   user-select: none;
   color: #555;
 }
@@ -39,22 +39,10 @@
   color: #fcfcfc;
 }
 
-.searchRow {
-  display: flex;
-  width: auto;
-}
-
-.searchGrid {
-  border: 4px #ccc solid;
-  width: auto;
-  margin: auto;
-  border: 1px #bbb solid;
-}
-
 .container {
   display: flex;
   margin: auto;
-  width: 70%;
+  width: 80%;
 }
 
 #root-wordSearch {
@@ -74,19 +62,19 @@ li {
   border: 1px #ececec solid;
   letter-spacing: 1px;
   background-color: #ddd;
-  padding: 5px;
+  padding: 0.2em;
   border-radius: 5px;
 
 }
 
 #word-list li {
-  padding: 4px 5px;
-  margin: 2px;
-  border-left: 1px #333 solid;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-left: 1% #333 solid;
   transition: all 0.3s;
   font-weight: lighter;
   background-color: #f0f0f0;
-  border-radius: 5px;
+  border-radius: 0.3em;
 
 }
 
@@ -96,12 +84,13 @@ li {
 }
 
 .ws-my-page-success-toast {
-  width: auto;
+  width: 10em;
   background-color: #5e72e4;
   position: relative;
   margin: auto;
   text-align: center;
-  padding: 10px;
+  padding: 0.3em;
+  border-radius: 0.3em;
   color: #fff;
 }
 

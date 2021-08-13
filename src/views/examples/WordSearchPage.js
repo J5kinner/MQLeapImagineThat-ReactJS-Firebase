@@ -9,9 +9,9 @@ import { Button, Card, Container, Row, Col } from "reactstrap";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
-import WordSearch from "views/IndexSections/WordSearch.js";
+import WordSearch from "views/IndexSections/WordSearchComps/WordSearch.js";
 
-import wordSearchStyles from "../IndexSections/wordSearchStyles.css";
+import wordSearchStyles from "../IndexSections/WordSearchComps/wordSearchStyles.scss";
 
 class Profile extends React.Component {
   componentDidMount() {
@@ -64,14 +64,16 @@ class Profile extends React.Component {
                       to the last letter to discover each word.
                     </div>
                   </div>
-                      <div className={wordSearchStyles}>
                       <Row className="justify-content-center">
-                        <Col className="md-5">
+                       
+                        <div className={wordSearchStyles}>
+
                         <WordSearch />
-                        </Col>
+                        </div>
+                        
                         </Row>
 
-                      </div>
+                     
                 </div>
                 <Row className="justify-content-center">
                   <Col className="order-lg-2" lg="3"></Col>
@@ -80,6 +82,8 @@ class Profile extends React.Component {
                     lg="4"
                   >
                     <div className="card-profile-actions py-4 mt-lg-0">
+
+
                       <Button
                         className="mr-4"
                         color="info"
@@ -89,6 +93,8 @@ class Profile extends React.Component {
                       >
                         Next Level
                       </Button>
+
+
                       <Button
                         className="float-right"
                         color="default"

@@ -1,31 +1,29 @@
-
-
 // Copyright (c) YEAR - https://codepen.io/imdigvijay/pen/gqzJKX
 
-// Permission is hereby granted, free of charge, to any person 
-// obtaining a copy of this software and associated documentation 
+// Permission is hereby granted, free of charge, to any person
+// obtaining a copy of this software and associated documentation
 // files (the "Software"), to deal in the Software without restriction,
-//  including without limitation the rights to use, copy, modify, 
-// merge, publish, distribute, sublicense, and/or sell copies of 
-// the Software, and to permit persons to whom the Software is 
+//  including without limitation the rights to use, copy, modify,
+// merge, publish, distribute, sublicense, and/or sell copies of
+// the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 
-// The above copyright notice and this permission notice shall 
+// The above copyright notice and this permission notice shall
 // be included in all copies or substantial portions of the Software.
 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
-// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
-// OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
-// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
-// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+// OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
-
 
 import React from "react";
 import WordSearchData from "./WordSearchData/WordSearchData";
 
+ var counter = 0;
 var completeList = [
   "Psychologist",
   "Accountant",
@@ -44,11 +42,14 @@ var completeList = [
   "Doctor",
 ];
 
+
 function getRandomWords() {
   let lst = [];
-  for (var i = 0; i < 15; i++) {
+  counter++
+  if(counter)
+  for (var i = 0; i < completeList.length; i++) {
     let currItem =
-    completeList[Math.floor(Math.random() * completeList.length)];
+      completeList[Math.floor(Math.random() * completeList.length)];
     if (lst.indexOf(currItem) === -1) {
       lst.push(currItem);
     } else {
@@ -65,8 +66,9 @@ function WSGenerator(wordList, directions) {
   this.gridSize = 0;
   this.gridArr = [];
   this.directions =
-    directions && directions.length ? directions : [-2, -1, 1, 2];
+    directions && directions.length ? directions : [-4, -3, -2, -1, 1, 2, 3, 4];
   this.wordList = wordList && wordList.length ? wordList : getRandomWords();
+
   this.wordList = this.wordList.map((item, i) => {
     return { text: item, index: i, found: false };
   });
@@ -245,7 +247,7 @@ WSGenerator.prototype.populateWord = function (word) {
   let start = { x: this.getRandomRow(), y: this.getRandomColumn() };
   let dir = this.getRandomDirection();
 
-  console.log(word, start, dir);
+  //console.log(word, start, dir);
   if (this.isPlacable(word, start, null, dir, null)) {
     this.placeWord(word.toUpperCase(), start, null, dir, null);
   } else {
@@ -272,32 +274,7 @@ WSGenerator.prototype.populateUnusedBoxes = function () {
 };
 
 WSGenerator.prototype.alphabets = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "R",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
+  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
 ];
 
 // Solver part
@@ -519,7 +496,7 @@ class Cell extends React.Component {
   mouseOut(evt) {
     let id = evt.target.id;
     let startBox = this.props.hasSelectionStarted();
-    let hilighted = false;
+    let hilighted = true;
     if (startBox && startBox.id === id) {
       hilighted = true;
     }
@@ -610,10 +587,10 @@ class Grid extends React.Component {
       if (obj.match && !obj.found) {
         this.ws.alreadyFound.push(str);
         this.ws.wordList.forEach((item) => {
-          console.log(
-            str.split("").reverse().join("").toLowerCase(),
-            item.text.toLowerCase()
-          );
+          // console.log(
+          //   str.split("").reverse().join("").toLowerCase(),
+          //   item.text.toLowerCase()
+          // );
           if (
             item.text.toLowerCase() === str.toLowerCase() ||
             str.split("").reverse().join("").toLowerCase() ===
@@ -627,14 +604,6 @@ class Grid extends React.Component {
           let [i, j] = item;
           this.ws.gridArr[i][j].used = true;
         });
-        // for(let i = 0; i < this.ws.gridArr.length; i++) {
-        //   for(let j = 0; j < this.ws.gridArr[i].length; j++) {
-        //     if(strObj.ids.indexOf(this.ws.gridArr[i][j].id) !== -1) {
-        //       this.ws.gridArr[i][j].used = true;
-        //     }
-        //   }
-        // }
-        //this.forceUpdate();
       }
 
       this.ws.startBox = null;
@@ -646,19 +615,10 @@ class Grid extends React.Component {
     }
   }
 
-  mouseOver(evt) {
-    if(this.ws.startBox !== null) {
-      let tempEndBox;
-      let id = evt.target.id;
-      tempEndBox = this.ws.getBoxById(id);
-      let dir = this.ws.getDirection(this.ws.startBox,  tempEndBox);
-      //highLightBoxes(this.ws.startBox, tempEndBox, dir);
-    }
-  }
-
   hasSelectionStarted() {
     return this.ws.startBox;
   }
+
 
   render() {
     let gridStyle = {
@@ -668,8 +628,11 @@ class Grid extends React.Component {
     };
     let gridArr = this.props.ws.gridArr.slice();
     let wordList = this.props.ws.wordList.slice();
-    let toastVisible =
-      this.props.ws.wordList.length === this.props.ws.alreadyFound.length;
+    let toastVisible = this.props.ws.wordList.length === this.props.ws.alreadyFound.length;
+    if(this.props.ws.wordList.length === this.props.ws.alreadyFound.length){
+      console.log("Hey you finished?");
+      
+    }
     return (
       <div id="root-wordSearch">
         <div className="grid" style={gridStyle}>
@@ -745,7 +708,7 @@ class WordSearch extends React.Component {
 
   render() {
     return (
-      <div id="root-wordSearch-container">
+      <div id="root-container">
         <Grid ws={this.wsGenerator} />
       </div>
     );

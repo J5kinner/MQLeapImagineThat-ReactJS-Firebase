@@ -75,22 +75,7 @@ class DemoNavbar extends React.Component {
                 onExited={this.onExited}
               >
                 <div className="navbar-collapse-header">
-                  <Row>
-                    <Col className="collapse-brand" xs="6">
-                      <Link to="/">
-                        <img
-                          alt="..."
-                          src={require("assets/img/brand/argon-react.png")}
-                        />
-                      </Link>
-                    </Col>
-                    <Col className="collapse-close" xs="6">
-                      <button className="navbar-toggler" id="navbar_global">
-                        <span />
-                        <span />
-                      </button>
-                    </Col>
-                  </Row>
+                  
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
                   <UncontrolledDropdown nav>
@@ -160,7 +145,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.facebook.com/creativetim"
+                      href="https://www.facebook.com/WideningParticipationMQ/"
                       id="tooltip333589074"
                       target="_blank"
                     >
@@ -176,7 +161,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.instagram.com/creativetimofficial"
+                      href="https://www.instagram.com/mqwideningparticipation/"
                       id="tooltip356693867"
                       target="_blank"
                     >
@@ -192,7 +177,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://twitter.com/creativetim"
+                      href="https://twitter.com/_MQ_WP"
                       id="tooltip184698705"
                       target="_blank"
                     >
