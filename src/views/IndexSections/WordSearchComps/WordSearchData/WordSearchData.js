@@ -1,5 +1,5 @@
 
-export const WordSearchData = [
+export default WordSearchData = [
   {
     id: 1,
     values: [

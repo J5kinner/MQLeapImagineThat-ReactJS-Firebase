@@ -25,9 +25,8 @@ import Row from "./Row.js";
 import Cell from './Cell.js';
 import Grid from "./Grid.js";
 import WordSearch from "./WordSearch.js";
-import WordSearchData from "./WordSearchData/WordSearchData";
 
- var counter = 0;
+
 var completeList = [
   "Psychologist",
   "Accountant",
@@ -46,33 +45,201 @@ var completeList = [
   "Doctor",
 ];
 
+var WordSearchData = [
+  {
+    id: 1,
+    values: [
+      "Psychologist",
+      "Accountant",
+      "Researcher",
+      "Hairdresser",
+      "Carpenter",
+      "Academic",
+      "Teacher",
+      "Lawyer",
+      "Athlete",
+      "Gamer",
+      "Chef",
+      "Engineer",
+      "Chemist",
+      "Farmer",
+      "Doctor",
+    ],
+  },
+  {
+    id: 2,
+    values: [
+      "Horticulturalist",
+      "Epidemiologist",
+      "Politician",
+      "Astronomer",
+      "Professor",
+      "Physicist",
+      "Scientist",
+      "Volunteer",
+      "Designer",
+      "Plumber",
+      "Youtuber",
+      "Dietician",
+      "Dentist",
+      "Nurse",
+      "Vet",
+    ],
+  },
+  {
+    id: 3,
+    values: [
+      "Businessowner",
+      "Optometrist",
+      "Journalist",
+      "Marketing",
+      "Inventor",
+      "Dancer",
+      "Olympian",
+      "Trader",
+      "Police",
+      "Singer",
+      "Artist",
+      "Writer",
+      "Army",
+    ],
+  },
+  {
+    id: 4,
+    values: [
+        "Accommodation",
+        "Undergraduate",
+        "Scholarships",
+        "Postgraduate",
+        "TAFE",
+        "University",
+        "Diploma",
+        "Degree",
+        "Study",
+        "ATAR",
+    ],
+  },
+  {
+    id: 5,
+    values: [
+        "Apprenticeship",
+        "Internship",
+        "Secondary",
+        "Education",
+        "Tertiary",
+        "Volunteer",
+        "Learning",
+        "Career",
+        "Vocation",
+        "Primary",
+    ],
+  },
+  {
+    id: 6,
+    values: [
+        "Qualification",
+        "Achievement",
+        "Knowledge",
+        "High School",
+        "Goals",
+        "Occupation",
+        "Training",
+        "Graduate",
+        "Jobs",
+        "HSC",
+    ],
+  },
+  {
+    id: 7,
+    values: [
+        "Compassionate",
+        "Intelligent",
+        "Creative",
+        "Curious",
+        "Friendly",
+        "Helpful",
+        "Sporty",
+        "Logical",
+        "Funny",
+        "Kind",
+    ],
+  },
+  {
+    id: 8,
+    values: [
+        "Inquisitive",
+        "Responsible",
+        "Thoughtful",
+        "Assertive",
+        "Thorough",
+        "Careful",
+        "Confident",
+        "Leader",
+        "Dreamer",
+        "Caring",
+        "Quick",
+    ],
+  },
+  {
+    id: 9,
+    values: [
+        "Communicator",
+        "Determined",
+        "Persistent",
+        "Easy going",
+        "Accurate",
+        "Positive",
+        "Aware",
+        "Courageous",
+        "Flexible",
+        "Listener",
+        "Patient",
+    ],
+  },
+  
+];
+var counter = 0;
+var data = WordSearchData[counter]
 
+// WSGenerator.prototype.completedLevel = function () {
+//   if(counter > 9){
+//     console.log("congrats you finished the game")
+//   }
+//   WSGenerator();
+//   console.log("hey it works");
+// }
 function getRandomWords() {
   let lst = [];
-  counter++
-  if(counter)
-  for (var i = 0; i < completeList.length; i++) {
+
+  console.log("getRandomWords ", data.values);
+
+  console.log("current level: ", counter);
+  for (var i = 0; i < data.values.length; i++) {
     let currItem =
-      completeList[Math.floor(Math.random() * completeList.length)];
+    data.values[Math.floor(Math.random() * data.values.length)];
     if (lst.indexOf(currItem) === -1) {
       lst.push(currItem);
     } else {
       i--;
     }
   }
+  counter++;
+  console.log("next level: ", counter);
+
+
   return lst.sort((a, b) => {
     return b.length - a.length;
   });
 }
 function WSGenerator(wordList, directions) {
-  var clen = completeList.length;
+  var clen = data.values.length;
   var clsIndex = Math.floor(Math.random() * (clen - 11));
   this.gridSize = 0;
   this.gridArr = [];
   this.directions =
     directions && directions.length ? directions : [-4, -3, -2, -1, 1, 2, 3, 4];
   this.wordList = wordList && wordList.length ? wordList : getRandomWords();
-
+  console.log(this.wordList);
   this.wordList = this.wordList.map((item, i) => {
     return { text: item, index: i, found: false };
   });
@@ -278,7 +445,8 @@ WSGenerator.prototype.populateUnusedBoxes = function () {
 };
 
 WSGenerator.prototype.alphabets = [
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+  "A",
+  "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
 ];
 
 // Solver part
@@ -417,6 +585,7 @@ WSGenerator.prototype.TestString = function (testStr) {
 
   if (matched) {
     matchFound = this.isAlreadyFound(testStr);
+    
   }
   if (reverseMatched) {
     reverseMatchFound = this.isAlreadyFound(reverseStr);
@@ -431,10 +600,18 @@ WSGenerator.prototype.TestString = function (testStr) {
   );
 
   if (matched && !matchFound) {
+    console.log("Found a new word!, ", testStr)
+    counter++;
+    console.log(counter);
+    console.log(completeList.length);
+    if(counter === completeList.length) {
+      console.log("you did it!", counter, completeList.length);
+    }
     return { found: false, str: testStr, match: true };
   } else if (reverseMatched && !reverseMatchFound) {
     return { found: false, str: reverseStr, match: true };
   } else if (matchFound && reverseMatchFound) {
+
     return { found: true, match: false };
   } else {
     return { found: false, match: false };
@@ -447,9 +624,12 @@ WSGenerator.prototype.isAlreadyFound = function (str) {
   for (count = 0; count < this.alreadyFound.length; count++) {
     if (str === this.alreadyFound[count]) {
       found = true;
+      console.log("you already found this word, ", str)
       break;
-    }
+    } 
+
   }
+
   return found;
 };
 
@@ -480,26 +660,26 @@ WSGenerator.prototype.getBoxById = function (id) {
 //grid.js
 
 
-class SuccessToast extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: props.visible,
-      message: props.message,
-    };
-    alert(props.visible);
-  }
+// class SuccessToast extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       visible: props.visible,
+//       message: props.message,
+//     };
+//     alert(props.visible);
+//   }
 
-  render() {
-    let styleObj = {
-      display: this.state.visible ? "block" : "block",
-      position: "absolute",
-      right: 0,
-      bottom: 0,
-    };
-    return <div style={styleObj}>{this.state.message}</div>;
-  }
-}
+//   render() {
+//     let styleObj = {
+//       display: this.state.visible ? "block" : "None",
+//       position: "absolute",
+//       right: 0,
+//       bottom: 0,
+//     };
+//     return <div style={styleObj}>{this.state.message}</div>;
+//   }
+// }
 
 //wordsearch.js
 

@@ -81,7 +81,7 @@ class Profile extends React.Component {
                     className="order-lg-3 text-lg-right align-self-lg-center"
                     lg="4"
                   >
-                    <div className="card-profile-actions py-4 mt-lg-0">
+                    {/* <div className="card-profile-actions py-4 mt-lg-0">
 
 
                       <Button
@@ -104,7 +104,7 @@ class Profile extends React.Component {
                       >
                         Save
                       </Button>
-                    </div>
+                    </div> */}
                   </Col>
                 </Row>
               </Card>
