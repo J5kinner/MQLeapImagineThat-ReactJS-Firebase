@@ -1,7 +1,7 @@
 # [MQ Leap Imagine That]()
 
 
-![Product Gif](https://raw.githubusercontent.com/J5kinner/MQLEAPIMAGINETHAT/giphy.gif)
+![Product Gif](https://github.com/J5kinner/MQLeapImagineThat/blob/master/giphy.gif)
 
 
 
