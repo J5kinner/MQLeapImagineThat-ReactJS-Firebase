@@ -8,21 +8,21 @@ export default () => {
   return (
     <aside>
       <div className="description">
-        You can drag these nodes to the pane on the right.
+        You can drag these Blocks to the pane on the left.
       </div>
       <div
         className="dndnode"
         onDragStart={(event) => onDragStart(event, "default")}
         draggable
       >
-        Default Node
+        Skill/Hobby Block
       </div>
       <div
         className="dndnode output"
         onDragStart={(event) => onDragStart(event, "output")}
         draggable
       >
-        Output Node
+        Career Block
       </div>
     </aside>
   );

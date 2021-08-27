@@ -10,7 +10,7 @@ import { Button, Card, Container, Row, Col } from "reactstrap";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
-import Tree from "../IndexSections/Tree.js";
+import Tree from "../IndexSections/FutureTree/Tree.js";
 class Profile extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -64,7 +64,7 @@ class Profile extends React.Component {
                       Then you can click each block to create a new skill or career
                     </div>
                     <div className="h6 font-weight-300">
-                      Then you can link each block to each other by dragging from the dots on each block
+                      Then all you need to do is connect the dots 
                     </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
