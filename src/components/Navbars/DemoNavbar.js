@@ -78,6 +78,30 @@ class DemoNavbar extends React.Component {
                   
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
+                <NavLink
+                      href="/CareerWheelPage"
+                    >
+                        Career Wheel
+             
+                    </NavLink>
+                    
+                    <NavLink
+                      href="/FutureMeTreePage"
+                    >
+                        Future Me Tree
+             
+                    </NavLink>
+                    <NavLink
+                      href="/WordSearchPage"
+                    >
+                        Word Search
+             
+                    </NavLink>
+                {/* <NavItem>
+                    <UncontrolledTooltip delay={0} target="tooltip333589074">
+                      Like us on Facebook
+                    </UncontrolledTooltip>
+                  </NavItem>
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
@@ -138,7 +162,7 @@ class DemoNavbar extends React.Component {
                         </Media>
                       </div>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
+                  </UncontrolledDropdown> */}
                   
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>

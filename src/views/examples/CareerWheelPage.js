@@ -78,7 +78,7 @@ class Profile extends React.Component {
                       entries.
                     </div>
                   </div>
-                  <div className="mt-5 py-5 border-top text-center">
+                  <div className=" border-top text-center">
                     <Row className="justify-content-center">
                       <FortuneWheel />
                     </Row>

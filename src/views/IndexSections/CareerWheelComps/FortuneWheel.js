@@ -102,7 +102,7 @@ const FortuneWheel = () => {
       </Button>
       <div>
         <i
-          className="ni education_hat mr-2"
+          className=" education_hat mr-2"
           onClick={() => handleSpinClick(letter)}
         />
       </div>
