@@ -6,7 +6,7 @@ gulp.task("licenses", async function() {
   await gulp
     .src("build/static/js/*chunk.js", { base: "./" })
     .pipe(
-      gap.prependText(`/*!
+      gap.prependText(`/*! what does this do
 
 
 */`)
@@ -17,7 +17,7 @@ gulp.task("licenses", async function() {
   await gulp
     .src("build/index.html", { base: "./" })
     .pipe(
-      gap.prependText(`<!--
+      gap.prependText(`<!-- Hello
 
 
 
@@ -29,7 +29,7 @@ gulp.task("licenses", async function() {
   await gulp
     .src("build/static/css/*chunk.css", { base: "./" })
     .pipe(
-      gap.prependText(`/*!
+      gap.prependText(`/*! wow
 
 
 
